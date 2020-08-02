@@ -4,8 +4,6 @@ import xml.etree.ElementTree as et
 import json
 import ssl
 
-
-
 # ignore ssl certificate error 
 ctx=ssl.create_default_context()
 ctx.check_hostname= False
@@ -25,5 +23,6 @@ info=json.loads(data)
 for i in info["comments"]:
     sumCount+=int(i["count"])
 
+#sum of count
 print(sumCount)
 
